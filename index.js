@@ -4,7 +4,7 @@ function generateEvent(event) {
   const searchInput = document.querySelector("#search-text-input");
   let prompt = searchInput.value;
   let context =
-    "give me a short event description that is two sentances long with one emoji.";
+    "give me a short event description that is three sentances long with one emoji.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
   const responseText = document.getElementById("responseText");
 
