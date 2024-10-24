@@ -128,6 +128,7 @@ body {
   color: #0a1332;
   font-family: "Bungee", sans-serif;
   text-align: center;
+  padding: 0 2rem;
 }
 
 h1 {
@@ -142,7 +143,8 @@ p {
 
 .container {
   background-color: #e7e7e7;
-  width: 500px;
+  width: fit-content;
+  max-width: 500px;
   border-radius: 25px;
   margin: 200px auto;
   padding: 40px 25px 25px 25px;
@@ -157,6 +159,7 @@ form {
 .form-input {
   font-family: "Bungee", sans-serif;
   width: 55%;
+  height: 1.5rem;
   background-color: #eef2ff;
   color: #0a1332;
   border: 2px solid #0081af;
@@ -170,7 +173,7 @@ form {
 
 .form-submit {
   font-family: "Bungee", sans-serif;
-  width: 40%;
+  width: fit-content;
   background-color: #0081af;
   color: #e7e7e7;
   border: none;
@@ -182,6 +185,23 @@ form {
   transition: all 200ms ease;
   background-color: #0080afb0;
   color: #e7e7e7;
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    flex-direction: column;
+  }
+
+  .form-input {
+    width: auto;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .form-submit {
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 .response {
